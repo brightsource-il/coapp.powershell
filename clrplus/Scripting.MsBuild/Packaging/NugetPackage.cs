@@ -719,7 +719,7 @@ namespace ClrPlus.Scripting.MsBuild.Packaging {
 
                 // add the key
                 var enumProperty = xaml.Rule.Add("EnumProperty");
-                enumProperty.Attributes.Name = "{0}-{1}".format(pivot.Name, _pkgName);
+                enumProperty.Attributes.Name = "{0}-{1}".format(pivot.Name, SafeName);
                 enumProperty.Attributes.DisplayName = pivot.Name;
                 enumProperty.Attributes.Description = pivot.Description;
                 enumProperty.Attributes.Category = _pkgName;
