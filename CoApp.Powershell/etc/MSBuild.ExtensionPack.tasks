@@ -8,6 +8,33 @@
     <MSBuildExtensionPackGitDll>$(ExtensionTasksPath)MSBuild.ExtensionPack.Git.dll</MSBuildExtensionPackGitDll>
     <CoAppExtensionPackDll>$(ExtensionTasksPath)CoApp.Powershell.Tools.dll</CoAppExtensionPackDll>
   </PropertyGroup>
+<Target Name="VC_V141_X64">
+    <GetEnvironmentFromBatchFile BatchFile="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" Parameters="amd64" />
+</Target>
+<Target Name="VC_V141_WIN32">
+    <SetEnvironmentFromTarget Target="VC_V141_X86">
+        <Output TaskParameter="TargetOutputs" PropertyName="TargetOutputs" />
+        <Output TaskParameter="TargetOutputs" ItemName="TargetOutputs" />
+        <Output TaskParameter="IsEnvironmentValid" PropertyName="IsEnvironmentValid" />
+        <Output TaskParameter="IsEnvironmentValid" ItemName="IsEnvironmentValid" />
+    </SetEnvironmentFromTarget>
+    <Error Condition="!$(IsEnvironmentValid)" />
+</Target>
+<Target Name="VC_V141_AMD64">
+    <SetEnvironmentFromTarget Target="VC_V141_X64">
+        <Output TaskParameter="TargetOutputs" PropertyName="TargetOutputs" />
+        <Output TaskParameter="TargetOutputs" ItemName="TargetOutputs" />
+        <Output TaskParameter="IsEnvironmentValid" PropertyName="IsEnvironmentValid" />
+        <Output TaskParameter="IsEnvironmentValid" ItemName="IsEnvironmentValid" />
+    </SetEnvironmentFromTarget>
+    <Error Condition="!$(IsEnvironmentValid)" />
+</Target>
+<Target Name="VC_V141_X86">
+    <GetEnvironmentFromBatchFile BatchFile="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" Parameters="x86" />
+</Target>
+<Target Name="VC_V141_ARM">
+    <GetEnvironmentFromBatchFile BatchFile="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" Parameters="x86_arm" />
+</Target>
   <Target Name="VC_V140_X64">
     <GetEnvironmentFromBatchFile BatchFile="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" Parameters="amd64" />
   </Target>

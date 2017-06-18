@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Name="CoApp.Powershell (v2.4.567.0)" Language="1033" Version="2.4.567.0" Manufacturer="Outercurve Foundation, CoApp Project" UpgradeCode="a43c25d7-b22a-411c-b780-3a83479b1d26">
+  <Product Id="*" Name="CoApp.Powershell (v2.5.1.0)" Language="1033" Version="2.5.1.0" Manufacturer="Outercurve Foundation, CoApp Project" UpgradeCode="a43c25d7-b22a-411c-b780-3a83479b1d26">
 
     <Package Description="CoApp Developer Tools" InstallPrivileges="elevated" Comments="CoApp Developer Tools Installer" InstallerVersion="200" Compressed="yes"></Package>
 
     <Upgrade Id="a43c25d7-b22a-411c-b780-3a83479b1d26">
-      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0" IncludeMinimum="yes" Maximum="2.4.567.0" IncludeMaximum="no"></UpgradeVersion>
+      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0" IncludeMinimum="yes" Maximum="2.5.1.0" IncludeMaximum="no"></UpgradeVersion>
     </Upgrade>
 
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf"></WixVariable>

@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Configuration" >
-    <!-- This lets Visual Studio see this as a VC11 project by default -->
-    <PlatformToolset Condition="'$(PlatformToolset)' == ''">v140</PlatformToolset>
+    <!-- This lets Visual Studio see this as a VC14.1 project by default -->
+    <PlatformToolset Condition="'$(PlatformToolset)' == ''">v141</PlatformToolset>
   </PropertyGroup>
 
   <Import Condition="Exists('$(CoAppEtcDirectory)\common-variables.vcxproj')" Project="$(CoAppEtcDirectory)\common-variables.vcxproj" />

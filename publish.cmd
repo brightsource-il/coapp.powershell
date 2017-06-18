@@ -1,7 +1,7 @@
 @echo off
 setlocal 
 
-set PATH=%PATH%;C:\Program Files (x86)\WiX Toolset v3.9\bin\;
+set PATH=%PATH%;C:\Program Files (x86)\WiX Toolset v3.11\bin\;
 
 set INSTALLERDIR=%~dp0\Installer
 set TARGETDIR=%~dp0\output\v45\AnyCPU\Release\bin

@@ -220,6 +220,9 @@
     <None Include="etc\vc12.toolinfo">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="etc\vc14.1.toolinfo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="etc\vc14.toolinfo">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
